@@ -55,7 +55,7 @@ body, html {
 /* Header */
 .header {
   height: 100vh;
-  min-width: 500px;
+  /* min-width: 500px; */
   position: relative;
   padding: 0;
   z-index: 1;
@@ -79,7 +79,6 @@ body, html {
   display: flex;
   align-items: center;
   column-gap: 5%;
-  padding: 0;
 }
 
 .header__texts {
@@ -270,6 +269,8 @@ body, html {
 }
 
 .course__about .cta {
+  margin-top: 15px;
+  padding: 15px 30px;
   color: var(--color-primary);
   background-color: #fff;
 }
@@ -303,6 +304,7 @@ body, html {
   display: flex;
   width: 100%;
   margin: 0 auto;
+  padding: 0 25px;
   justify-content: space-evenly;
   flex-direction: row-reverse;
   align-items: center;
@@ -341,4 +343,66 @@ body, html {
   text-align: center;
   font-style: italic;
   margin-top: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  /* Header */
+  .header__container {
+    flex-direction: column-reverse;
+  }
+  
+  .header__texts {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  /* Header */
+  .header__title {
+    font-size: 3rem;
+  }
+
+  .header__img {
+    width: 75%;
+  }
+
+  /* About */
+  .about {
+    flex-flow: column-reverse nowrap;
+  }
+
+  .about__texts {
+    margin-top: 15px;
+  }
+
+  /* Cards */
+  .cards__grid {
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 1em;
+  }
+
+  /* course */
+  .course {
+    display: flex;
+    flex-flow: column wrap;
+    row-gap: 1em;
+  }
+
+  .course__picture {
+    display: none;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 135px 25px 0 25px;
+  }
+
+  .footer__container {
+    flex-direction: column-reverse;
+  }
+
+  .footer__picture img {
+    width: 70%;
+  }
 }
